@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Support for Spin Tiger — contact, FAQ, troubleshooting." />
+  <meta name="theme-color" content="#0b0f19" />
+  <title>Spin Tiger — Support</title>
+
+  <style>
+    :root{
+      --bg:#070a12;
+      --panel: rgba(255,255,255,.06);
+      --text: rgba(255,255,255,.90);
+      --muted: rgba(255,255,255,.65);
+      --line: rgba(255,255,255,.14);
+      --a:#7cf7c4;
+      --b:#8ab6ff;
+      --c:#ff7bd1;
+      --shadow: 0 18px 55px rgba(0,0,0,.45);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font: 16px/1.55 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color:var(--text);
+      background:
+        radial-gradient(1000px 600px at 18% 10%, rgba(138,182,255,.18), transparent 58%),
+        radial-gradient(900px 600px at 78% 18%, rgba(124,247,196,.16), transparent 58%),
+        radial-gradient(900px 700px at 50% 100%, rgba(255,123,209,.14), transparent 60%),
+        linear-gradient(180deg, #060814 0%, #070a12 58%, #05060c 100%);
+    }
+    .wrap{max-width:980px;margin:0 auto;padding:26px 18px 70px}
+    header{
+      display:flex;align-items:center;justify-content:space-between;gap:14px;
+      padding:14px 14px;
+      margin:0 -14px 18px;
+      background: linear-gradient(180deg, rgba(7,10,18,.92), rgba(7,10,18,.55));
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid rgba(255,255,255,.08);
+      position:sticky;top:0;z-index:10;
+    }
+    a{color:inherit}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .logo{
+      width:38px;height:38px;border-radius:12px;
+      background:
+        radial-gradient(14px 14px at 30% 30%, rgba(255,255,255,.55), transparent 60%),
+        linear-gradient(135deg, rgba(124,247,196,.95), rgba(138,182,255,.9), rgba(255,123,209,.85));
+      box-shadow: 0 12px 30px rgba(0,0,0,.35);
+      border:1px solid rgba(255,255,255,.18);
+    }
+    .brand h1{font-size:14px;margin:0;letter-spacing:.6px}
+    .brand span{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+    nav{display:flex;gap:10px;flex-wrap:wrap}
+    .pill{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:9px 12px;border-radius:999px;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.12);
+      text-decoration:none;
+      transition:transform .15s ease, background .15s ease, border-color .15s ease;
+    }
+    .pill:hover{transform: translateY(-1px); background: rgba(255,255,255,.09); border-color: rgba(255,255,255,.18);}
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.05));
+      border:1px solid rgba(255,255,255,.14);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:18px;
+      margin-top:14px;
+    }
+    .title{font-size:30px;line-height:1.15;margin:0 0 6px}
+    .lead{margin:0;color:var(--muted);max-width:75ch}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;margin-top:14px}
+    .col7{grid-column:span 7}
+    .col5{grid-column:span 5}
+    .col12{grid-column:span 12}
+    @media(max-width:900px){.col7,.col5{grid-column:span 12}}
+    .box{
+      padding:14px;border-radius:16px;
+      background: rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.12);
+      height:100%;
+    }
+    .box h3{margin:0 0 6px;font-size:16px}
+    .box p{margin:0;color:var(--muted)}
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:11px 14px;border-radius:14px;
+      border:1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.06);
+      text-decoration:none;font-weight:600;
+      transition:transform .15s ease, background .15s ease, border-color .15s ease;
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.10); border-color: rgba(255,255,255,.22);}
+    details{
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      border-radius: 16px;
+      padding: 12px 14px;
+    }
+    details + details{margin-top:10px}
+    summary{cursor:pointer;font-weight:700}
+    summary::-webkit-details-marker{display:none}
+    .hint{margin-top:8px;color:var(--muted)}
+    footer{
+      margin-top:22px;
+      padding-top:16px;
+      border-top:1px solid rgba(255,255,255,.10);
+      color:var(--muted);
+      display:flex;align-items:flex-start;justify-content:space-between;gap:14px;flex-wrap:wrap;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="index.html" aria-label="Spin Tiger Home">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Spin Tiger</h1>
+          <span>Support • Oskar Huber</span>
+        </div>
+      </a>
+      <nav>
+        <a class="pill" href="index.html">Marketing</a>
+        <a class="pill" href="privacy.html">Privacy Policy</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <h2 class="title">Support</h2>
+      <p class="lead">
+        Need help with <strong>Spin Tiger</strong>? This page explains how to reach the developer and how to troubleshoot common issues.
+      </p>
+
+      <div class="grid">
+        <div class="box col7">
+          <h3>Contact the developer</h3>
+          <p>
+            Email: <span class="mono">oskarhuber27@icloud.com</span><br />
+            Developer: <strong>Oskar Huber</strong><br />
+            App: <strong>Spin Tiger</strong>
+          </p>
+          <div style="height:12px"></div>
+          <a class="btn" href="mailto:oskarhuber27@icloud.com?subject=Spin%20Tiger%20Support&body=Hi%20Oskar,%0A%0AI%20need%20help%20with%20Spin%20Tiger.%0A%0ADevice%20model:%0AiOS%20version:%0AApp%20version:%0ASteps%20to%20reproduce:%0AExpected%20result:%0AActual%20result:%0A%0AThanks!">
+            Email Support
+          </a>
+          <p class="hint">
+            Tip: Including your device model, iOS version, and steps to reproduce helps a lot.
+          </p>
+        </div>
+
+        <div class="box col5">
+          <h3>Response expectations</h3>
+          <p>
+            I’m an indie developer and I read every message.
+            Response times can vary, but I aim to reply as soon as possible.
+          </p>
+          <p class="hint">
+            If your issue is urgent, put <span class="mono">URGENT</span> in the subject line.
+          </p>
+        </div>
+
+        <div class="box col12">
+          <h3>Troubleshooting checklist</h3>
+          <p>
+            1) Restart the app • 2) Reboot your device • 3) Update to the latest iOS version •
+            4) Reinstall the app • 5) Try again on a stable network (if applicable).
+          </p>
+          <p class="hint">
+            If the issue persists, email support with screenshots (if possible).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" aria-label="FAQ">
+      <h2 style="margin:0 0 10px;font-size:18px">FAQ</h2>
+
+      <details>
+        <summary>Does Spin Tiger collect any personal data?</summary>
+        <div class="hint">
+          No. Spin Tiger does not collect, store, or share personal data. See the <a href="privacy.html">Privacy Policy</a>.
+        </div>
+      </details>
+
+      <details>
+        <summary>Are there any subscriptions or paid features?</summary>
+        <div class="hint">
+          Not currently. The app is free with no subscriptions and no paid features at this time.
+          Monetization may be added in the future, and it will be communicated clearly.
+        </div>
+      </details>
+
+      <details>
+        <summary>How can I request a feature?</summary>
+        <div class="hint">
+          Email <span class="mono">oskarhuber27@icloud.com</span> with your idea and why it’s useful.
+          I prioritize features that improve real-world value and reliability.
+        </div>
+      </details>
+
+      <details>
+        <summary>How do I report a bug?</summary>
+        <div class="hint">
+          Please include: device model, iOS version, app version, and steps to reproduce.
+          If you can, attach a screenshot or screen recording.
+        </div>
+      </details>
+    </section>
+
+    <footer>
+      <div>© <span id="y"></span> Oskar Huber • Spin Tiger Support</div>
+      <div>Contact: <span class="mono">oskarhuber27@icloud.com</span></div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
